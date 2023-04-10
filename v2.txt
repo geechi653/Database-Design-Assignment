@@ -1,0 +1,3 @@
+To migrate the schema to v2, I would create a new table called "user_accounts" with columns "user_id" (foreign key to users table), "account_type" (varchar), and any additional columns needed for each account type. 
+I would then update the user table to remove the "password" column and replace it with a foreign key to the user_accounts table. Finally, I would modify any queries that rely on the password column to join with the user_accounts 
+table instead. Additionally, I would modify the playlists table to include a "playlist_order" column, allowing for a user to change the order of their songs within a playlist.
